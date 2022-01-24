@@ -1,119 +1,116 @@
 :root {
-    font-size: 16px;
-    font-family: "Open Sans", sans-serif;
-    --text-primary: #ff9300;
-    --text-secondary: #f9b208;
-    --bg-primary: #1db9c3;
-    --bg-secondary: #0ad4b6;
-    --transition-speed: 600ms;
-  }
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  --text-primary: #ff9300;
+  --text-secondary: #f9b208;
+  --bg-primary: #1db9c3;
+  --bg-secondary: #0ad4b6;
+  --transition-speed: 600ms;
+}
 
-  main canvas{
-    position: absolute;
-    top: 0;
-    right:0;
-  }
+main canvas {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 
-  body {
-    color: var(--text-primary);
-    background-color: var(--bg-primary);
-    margin: 0;
-    padding: 0;
-  }
-  body::-webkit-scrollbar {
-    width: 0.25rem;
-  }
-  body::-webkit-scrollbar-track {
-    background: var(--bg-secondary);
-  }
-  body::-webkit-scrollbar-thumb {
-    background: var(--text-secondary);
-  }
-  
-  /*  rem is relative to the font size on the root element
+body {
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  margin: 0;
+  padding: 0;
+}
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+body::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+body::-webkit-scrollbar-thumb {
+  background: var(--text-secondary);
+}
+
+/*  rem is relative to the font size on the root element
       therefore: 5rem * 16px = 80px  */
-  main {
-    margin-left: 5rem;
-  }
-  main p {
-    font-weight: 600;
-  }
-  
-  .navbar {
-      width: 5rem;
-      /* vh is also a relative unit, relative to size of
+main {
+  margin-left: 5rem;
+}
+main p {
+  font-weight: 600;
+}
+
+.navbar {
+  width: 5rem;
+  /* vh is also a relative unit, relative to size of
       of the viewport */
-      height: 100vh;
-      position: fixed;
-      background-color: var(--text-secondary);
-      transition: width 300ms ease;
-  }
-  
-  .navbar-nav{
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height:100%
-  }
-  
-  .nav-item{
-      width: 100%;
-  }
-  
-  .nav-item:last-child {
-      margin-top: auto;
-  }
-  
-  .nav-link{
-      display: flex;
-      align-items: center;
-      height: 5rem;
-      color: var(--bg-primary);
-      text-decoration: none;
-      filter: grayscale(100%) opacity(0.7);
-      transition: var(--transition-speed);
-  }
-  
-  .nav-link:hover{
-      filter: grayscale(0%) opacity(1);
-      background: var(--text-primary);
-      color: var(--bg-primary);
-  
-  }
-  
-  .link-text {
-      display: none;
-      margin-left: 1rem;
-  }
-  .nav-link .far{
-      font-size: 2rem;
-      margin:  0 1.75rem;
-  }
-  
-  .nav-link .fa-newspaper{
-      margin:  0 1.5rem;
-  }
-  
-  .navbar:hover{
-      width: 16rem;
-  }
-  
-  .navbar:hover .link-text{
-      display: block;
-      font-weight: 500;
-  
-  }
-  
-  .far{
-      color: var(--bg-primary);
-      transition: var(--transition-speed);
-  }
-  
-  .title{
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 2rem;
-  }
+  height: 100vh;
+  position: fixed;
+  background-color: var(--text-secondary);
+  transition: width 300ms ease;
+}
+
+.navbar:hover {
+  width: 16rem;
+}
+
+.navbar:hover .link-text {
+  display: block;
+  font-weight: 500;
+}
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  color: var(--bg-primary);
+  text-decoration: none;
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  background: var(--text-primary);
+  color: var(--bg-primary);
+}
+
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+.nav-link .far {
+  font-size: 2rem;
+  margin: 0 1.75rem;
+}
+
+.nav-link .fa-newspaper {
+  margin: 0 1.5rem;
+}
+
+.far {
+  color: var(--bg-primary);
+  transition: var(--transition-speed);
+}
+
+.title {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2rem;
+}
