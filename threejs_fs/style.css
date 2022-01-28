@@ -8,7 +8,7 @@
   --transition-speed: 600ms;
 }
 
-main canvas {
+canvas {
   position: absolute;
   top: 0;
   right: 0;
@@ -106,11 +106,25 @@ main p {
 
 .far {
   color: var(--bg-primary);
-  transition: var(--transition-speed);
 }
 
 .title {
   display: flex;
   justify-content: flex-end;
   margin-right: 2rem;
+}
+
+.pyramid{
+  width: 4rem;
+}
+
+#article-page{
+  width: 40%;
+  height: 80%;
+  background-color: var(--text-secondary);
+  position: relative;
+  left: 40px;
+  top: -40px;
+  border-radius: 4rem;
+  display: none;
 }
