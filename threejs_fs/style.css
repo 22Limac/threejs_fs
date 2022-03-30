@@ -1,10 +1,26 @@
 :root {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
-  --text-primary: #ff9300;
+  /* --text-primary: #ff9300;
   --text-secondary: #f9b208;
   --bg-primary: #1db9c3;
-  --bg-secondary: #0ad4b6;
+  --bg-secondary: #0ad4b6; */
+  /* --text-primary: #fff89a;
+  --text-secondary: #FAFCC2;
+  --bg-primary: #9adcff;
+  --bg-secondary: #99FEFF; */
+  --text-primary: #fdca40;
+  --text-secondary: #df2935;
+  --bg-primary: #3772ff;
+  --bg-secondary: #e6e8e6;
+  /* --text-primary: #ff6d00;
+  --text-secondary: #ff8500;
+  --bg-primary: #0096c7;
+  --bg-secondary: #0077b6; */
+  /* --text-primary: #2dc653;
+  --text-secondary: #2dc653;
+  --bg-primary: #00bbf9;
+  --bg-secondary: #1e96fc; */
   --transition-speed: 600ms;
 }
 
@@ -12,6 +28,7 @@ canvas {
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 1;
 }
 
 body {
@@ -47,6 +64,7 @@ main p {
   position: fixed;
   background-color: var(--text-secondary);
   transition: width 300ms ease;
+  z-index: 2;
 }
 
 .navbar:hover {
@@ -65,10 +83,14 @@ main p {
   flex-direction: column;
   align-items: center;
   height: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .nav-item {
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .nav-item:last-child {
@@ -114,17 +136,46 @@ main p {
   margin-right: 2rem;
 }
 
-.pyramid{
+.pyramid {
   width: 4rem;
 }
 
-#article-page{
-  width: 40%;
-  height: 80%;
-  background-color: var(--text-secondary);
-  position: relative;
-  left: 40px;
-  top: -40px;
-  border-radius: 4rem;
-  display: none;
+.nav-item:hover #article-page,
+.nav-item:focus #article-page {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
 }
+
+#article-page {
+  width: 40vw;
+  height: 60vh;
+  background-color: var(--text-secondary);
+  position: absolute;
+  left: 14rem;
+  top: 1rem;
+  border-radius: 4rem;
+  border-style: solid;
+  border-width: 3px;
+  border-color: var(--bg-secondary);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out;
+}
+
+/* .hide{
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+  -webkit-transition: opacity 0.5s ease-out;
+  -moz-transition: opacity 0.5s ease-out;
+  -o-transition: opacity 0.5s ease-out;
+}
+
+.show{
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+  -webkit-transition: opacity 0.5s ease-in;
+  -moz-transition: opacity 0.5s ease-in;
+  -o-transition: opacity 0.5s ease-in;
+
+} */
